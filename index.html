@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META  -->
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- STYLES -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <title>Task</title>
+</head>
+<body>
+  <main class="main">
+    <h1 class="visually-hidden">Task</h1>
+    <form class="form">
+      <div class="desc">
+        <label class="desc__label" for="desc__input">Description</label>
+        <textarea class="input" id="desc__input" name="description" maxlength="255" placeholder="Write you'r text here :)" required></textarea>
+        <div class="desc__block">
+          <div class="desc__error">
+            <span class="desc__error-max error">You can’t enter more than 255 characters</span>
+            <span class="desc__error-required error">Text is required</span>
+          </div>
+          <div class="desc__counter-block">
+            <span class="desc__counter">0</span>/255
+          </div>
+        </div>
+      </div>
+      <div class="confirm">
+        <label class="confirm__label" for="confirm__radio">
+          <input type="radio" name="yes/no" id="confirm__radio" required>
+          <span class="confirm__radio--fake"></span>
+          Send confirmation
+        </label>
+        <span class="confirm__error-required error">Text is required</span>
+      </div>
+      <div class="select-block">
+        <select name="" id="select-block__select" placeholder="Choose VAT" required>
+          <option value="choose" disabled selected>Choose VAT</option>
+          <option value="0.19">19%</option>
+          <option value="0.21">21%</option>
+          <option value="0.23">23%</option>
+          <option value="0.25">25%</option>
+        </select>
+        <span class="select__error-required error">Text is required</span>
+      </div>
+      <div class="price">
+        <div class="price__wrapper">
+          <div class="price__col--left">
+            <label class="price__label" for="price__netto">Price netto EUR</label>
+            <input class="input" id="price__netto" type="number" name="netto" required disabled>
+          </div>
+          <div class="price__col--left">
+            <label class="price__label" for="price__brutto">Price brutto EUR</label>
+            <input class="input" id="price__brutto" type="text" name="brutto" disabled>
+          </div>
+        </div>
+        <span class="price__error error">Please, input number</span>
+      </div>
+      <button id="form__submit" type="submit">Send data</button>
+    </form>
+    <div class="congr-mess">
+      <p class="congr-mess__text">Success</p>
+    </div>   
+    <div class="error-mess">
+      <p class="error__text">Error</p>
+      <button class="error__close" type="button">close</button>
+    </div>
+  </main>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
